@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>User Register</title>
+
+      	<link rel="stylesheet" href="../static/css/style.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+  </head>
+
+  <body>
+
+      <div class="register">
+          <h1>Register</h1>
+        	<div class="links">
+				<a href="{{ url_for('login') }}" >Login</a>
+				<a href="{{ url_for('showSignUp') }}" class="active">Register</a>
+			</div>
+        <form class="" action="{{ url_for('signUp') }}" method="post">
+        <label for="inputName" class="sr-only">Username</label>
+        <input type="text" name="name" id="inputName"  placeholder="Username" required autofocus>
+
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="text" name="email" id="inputEmail" placeholder="Email address" required autofocus>
+
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" name="password" id="inputPassword"  placeholder="Password" required>
+        <input type="hidden" name="userlevel" id="inputUserLevel" class="form-control" value="clientes">
+
+        <input type="submit" value="Register" class="btn btn-success">
+      </form>
+      </div>
+
+  </body>
+</html>
